@@ -1,0 +1,28 @@
+# log files
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# modules & build artefacts
+node_modules
+dist
+dist-ssr
+*.local
+
+# lock files
+package-json.lock
+
+# todo file
+todo
+
+# miscellaneous files
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
