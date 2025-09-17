@@ -15,16 +15,9 @@
 
     // modules
     "allowImportingTsExtensions": true,
-    "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "noUncheckedSideEffectImports": true,
-    "paths": {
-      "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"],
-      "@utils/*": ["src/utils/*"],
-      "@hooks/*": ["src/utils/hooks/*"]
-    },
 
     // emit
     "noEmit": true,
