@@ -54,9 +54,15 @@ const routes = {
   users: `/${appRoutePrefixes.identity}/${pageRoutePrefixes.users}`,
   user: `/${appRoutePrefixes.identity}/${pageRoutePrefixes.users}/:userId`,
 
+  // login page
+  login: '/login',
+
   // patients app
   patients: `/${appRoutePrefixes.patients}/${pageRoutePrefixes.patients}`,
   patient: `/${appRoutePrefixes.patients}/${pageRoutePrefixes.patients}/:patientId`,
+
+  // registration page
+  registration: '/registration',
 
   // rooms app
   roomCategories: `/${appRoutePrefixes.rooms}/${pageRoutePrefixes.roomCategories}`,
