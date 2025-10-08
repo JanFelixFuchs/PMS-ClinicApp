@@ -66,7 +66,7 @@ const routes = {
 
   // rooms app
   roomCategories: `/${appRoutePrefixes.rooms}/${pageRoutePrefixes.roomCategories}`,
-  roomCateogry: `/${appRoutePrefixes.rooms}/${pageRoutePrefixes.roomCategories}/:roomCategoryId`,
+  roomCategory: `/${appRoutePrefixes.rooms}/${pageRoutePrefixes.roomCategories}/:roomCategoryId`,
   rooms: `/${appRoutePrefixes.rooms}/${pageRoutePrefixes.rooms}`,
   room: `/${appRoutePrefixes.rooms}/${pageRoutePrefixes.rooms}/:roomId`,
 };
