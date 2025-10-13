@@ -1,0 +1,27 @@
+.flex-container {
+  height: 100%;
+  width: 100%;
+  padding: 1.25vh 1.25vw;
+}
+
+.breadcrumb {
+  margin-bottom: 1.5vh;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.icon {
+  width: 25%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.divider {
+  margin: 1.5vh 0;
+}
