@@ -1,7 +1,13 @@
+import { useTranslation } from 'react-i18next';
+import { getBreadcrumbItems } from '../../utils/routes/breadcrumbs';
+import PageSkeleton from '../../components/skeletons/PageSkeleton';
+import IconClinician from '../../components/icons/IconClinician';
+
 /* - - - STATIC ELEMENTS - - - */
 
 const ClinicianPage = () => {
   /* - - - DESTRUCTING - - - */
+  const { t } = useTranslation();
 
   /* - - - STATE VARIABLES - - - */
 
@@ -12,7 +18,15 @@ const ClinicianPage = () => {
   /* - - - USE EFFECTS - - - */
 
   /* - - - RETURN - - - */
-  return <></>;
+  return (
+    <PageSkeleton
+      breadcrumbItems={getBreadcrumbItems('clinicianPage', t)}
+      icon={IconClinician}
+      title={t('page.clinician.title')}
+    >
+      Placeholder
+    </PageSkeleton>
+  );
 };
 
 export default ClinicianPage;

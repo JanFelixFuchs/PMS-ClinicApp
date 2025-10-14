@@ -86,7 +86,7 @@ const breadcrumbItemConfigs = {
   ],
 
   // home
-  home: [{ pageName: 'home', hasRoute: false }],
+  homePage: [{ pageName: 'home', hasRoute: false }],
 
   // identity app
   rolesPage: [

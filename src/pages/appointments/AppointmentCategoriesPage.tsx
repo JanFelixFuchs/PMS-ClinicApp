@@ -1,7 +1,13 @@
+import { useTranslation } from 'react-i18next';
+import PageSkeleton from '../../components/skeletons/PageSkeleton';
+import IconAppointment from '../../components/icons/IconAppointment';
+import { getBreadcrumbItems } from '../../utils/routes/breadcrumbs';
+
 /* - - - STATIC ELEMENTS - - - */
 
 const AppointmentCategoriesPage = () => {
   /* - - - DESTRUCTING - - - */
+  const { t } = useTranslation();
 
   /* - - - STATE VARIABLES - - - */
 
@@ -12,7 +18,15 @@ const AppointmentCategoriesPage = () => {
   /* - - - USE EFFECTS - - - */
 
   /* - - - RETURN - - - */
-  return <></>;
+  return (
+    <PageSkeleton
+      breadcrumbItems={getBreadcrumbItems('appointmentCategoriesPage', t)}
+      icon={IconAppointment}
+      title={t('page.appointmentCategories.title')}
+    >
+      Placeholder
+    </PageSkeleton>
+  );
 };
 
 export default AppointmentCategoriesPage;
