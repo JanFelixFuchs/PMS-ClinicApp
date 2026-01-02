@@ -1,3 +1,13 @@
+:root {
+  /* - color - */
+  --color-primary: #fa8c16;
+  --color-background: #f4f7fc;
+  --color-transparent: rgba(5, 5, 5, 0.06);
+
+  /* - border - */
+  --border: 1px solid var(--color-transparent);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
