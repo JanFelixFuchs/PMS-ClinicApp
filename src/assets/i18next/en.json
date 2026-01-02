@@ -1,1 +1,116 @@
-{}
+{
+  "menu": {
+    "appLabel": {
+      "appointments": "Appointments",
+      "clinicians": "Clinicians",
+      "devices": "Devices",
+      "identity": "Identity",
+      "rooms": "Rooms"
+    }
+  },
+  "picture": {
+    "logo": {
+      "alternativeText": "Logo"
+    },
+    "icon": {
+      "appointment": {
+        "alternativeText": "Appointment icon"
+      },
+      "clinician": {
+        "alternativeText": "Clinician icon"
+      },
+      "device": {
+        "alternativeText": "Device icon"
+      },
+      "home": {
+        "alternativeText": "Home icon"
+      },
+      "identity": {
+        "alternativeText": "Identity icon"
+      },
+      "patient": {
+        "alternativeText": "Patient icon"
+      },
+      "room": {
+        "alternativeText": "Room icon"
+      }
+    }
+  },
+  "page": {
+    "appointmentCategories": {
+      "title": "Appointment Categories"
+    },
+    "appointmentCategory": {
+      "title": "Appointment Category"
+    },
+    "appointments": {
+      "title": "Appointments"
+    },
+    "appointment": {
+      "title": "Appointment"
+    },
+    "clinicianCategories": {
+      "title": "Clinician Categories"
+    },
+    "clinicianCategory": {
+      "title": "Clinician Category"
+    },
+    "clinicians": {
+      "title": "Clinicians"
+    },
+    "clinician": {
+      "title": "Clinician"
+    },
+    "deviceCategories": {
+      "title": "Device Categories"
+    },
+    "deviceCategory": {
+      "title": "Device Category"
+    },
+    "devices": {
+      "title": "Devices"
+    },
+    "device": {
+      "title": "Device"
+    },
+    "home": {
+      "title": "Home"
+    },
+    "login": {
+      "title": "Login"
+    },
+    "roles": {
+      "title": "Roles"
+    },
+    "role": {
+      "title": "Role"
+    },
+    "users": {
+      "title": "Users"
+    },
+    "user": {
+      "title": "User"
+    },
+    "patients": {
+      "title": "Patients"
+    },
+    "patient": {
+      "title": "Patient"
+    },
+    "registration": {
+      "title": "Registration"
+    },
+    "roomCategories": {
+      "title": "Room Categories"
+    },
+    "roomCategory": {
+      "title": "Room Category"
+    },
+    "rooms": {
+      "title": "Rooms"
+    },
+    "room": {
+      "title": "Room"
+    }
+  },
+}

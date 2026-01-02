@@ -1,1 +1,116 @@
-{}
+{
+  "menu": {
+    "appLabel": {
+      "appointments": "Termine",
+      "clinicians": "Kliniker",
+      "devices": "Geräte",
+      "identity": "Identität",
+      "rooms": "Räume"
+    }
+  },
+  "picture": {
+    "logo": {
+      "alternativeText": "Logo"
+    },
+    "icon": {
+      "appointment": {
+        "alternativeText": "Termin-Icon"
+      },
+      "clinician": {
+        "alternativeText": "Kliniker-Icon"
+      },
+      "device": {
+        "alternativeText": "Gerät-Icon"
+      },
+      "home": {
+        "alternativeText": "Home-Icon"
+      },
+      "identity": {
+        "alternativeText": "Identität-Icon"
+      },
+      "patient": {
+        "alternativeText": "Patient-Icon"
+      },
+      "room": {
+        "alternativeText": "Raum-Icon"
+      }
+    }
+  },
+  "page": {
+    "appointmentCategories": {
+      "title": "Terminkategorien"
+    },
+    "appointmentCategory": {
+      "title": "Terminkategorie"
+    },
+    "appointments": {
+      "title": "Termine"
+    },
+    "appointment": {
+      "title": "Termin"
+    },
+    "clinicianCategories": {
+      "title": "Klinikerkategorien"
+    },
+    "clinicianCategory": {
+      "title": "Klinikerkategorie"
+    },
+    "clinicians": {
+      "title": "Kliniker"
+    },
+    "clinician": {
+      "title": "Kliniker"
+    },
+    "deviceCategories": {
+      "title": "Gerätekategorien"
+    },
+    "deviceCategory": {
+      "title": "Gerätekategorie"
+    },
+    "devices": {
+      "title": "Geräte"
+    },
+    "device": {
+      "title": "Gerät"
+    },
+    "home": {
+      "title": "Home"
+    },
+    "login": {
+      "title": "Login"
+    },
+    "roles": {
+      "title": "Rollen"
+    },
+    "role": {
+      "title": "Rolle"
+    },
+    "users": {
+      "title": "Benutzer"
+    },
+    "user": {
+      "title": "Benutzer"
+    },
+    "patients": {
+      "title": "Patienten"
+    },
+    "patient": {
+      "title": "Patient"
+    },
+    "registration": {
+      "title": "Registrierung"
+    },
+    "roomCategories": {
+      "title": "Raumkategorien"
+    },
+    "roomCategory": {
+      "title": "Raumkategorie"
+    },
+    "rooms": {
+      "title": "Räume"
+    },
+    "room": {
+      "title": "Raum"
+    }
+  }
+}
