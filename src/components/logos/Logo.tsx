@@ -4,10 +4,11 @@ import logo from '../../assets/logos/logo.svg';
 /* - - - STATIC ELEMENTS - - - */
 interface Props {
   className: string;
+  onClick?: () => void;
 }
 
 /* - - - COMPONENT - - - */
-const Logo = ({ className }: Props) => {
+const Logo = ({ className, onClick }: Props) => {
   /* - - - DESTRUCTING - - - */
   const { t } = useTranslation();
 
@@ -25,6 +26,7 @@ const Logo = ({ className }: Props) => {
       alt={t('picture.logo.alternativeText')}
       className={className}
       src={logo}
+      onClick={onClick}
     />
   );
 };
