@@ -22,6 +22,9 @@
       "device": {
         "alternativeText": "Device icon"
       },
+      "empty": {
+        "alternativeText": "Empty icon"
+      },
       "home": {
         "alternativeText": "Home icon"
       },
