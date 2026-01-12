@@ -4,7 +4,7 @@ import AppointmentsPage from '../../../pages/appointments/AppointmentsPage';
 import AppointmentCategoriesPage from '../../../pages/appointments/AppointmentCategoriesPage';
 import DevicePage from '../../../pages/devices/DevicesPage';
 import DeviceCategoriesPage from '../../../pages/devices/DeviceCategoriesPage';
-import ClinicianPage from '../../../pages/clinicians/CliniciansPage';
+import ClinicianPage from '../../../pages/clinicians/ClinicianPage';
 import ClinicianCategoriesPage from '../../../pages/clinicians/ClinicianCategoriesPage';
 import AppointmentCategoryPage from '../../../pages/appointments/AppointmentCategoryPage';
 import AppointmentPage from '../../../pages/appointments/AppointmentPage';
