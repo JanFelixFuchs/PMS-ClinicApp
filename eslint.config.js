@@ -19,5 +19,31 @@ export default tseslint.config([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    rules: {
+      'no-restricted-imports': [
+        'error',
+        {
+          paths: [
+            {
+              name: 'react-redux',
+              importNames: ['useDispatch', 'useSelector'],
+              message:
+                "Only use custom typed hooks' (useAppDispatch/useAppSelector)",
+            },
+          ],
+        },
+      ],
+    },
+    overrides: [
+      {
+        files: [
+          'src/utils/hooks/useDispatch.ts',
+          'src/utils/hooks/useSelector.ts',
+        ],
+        rules: {
+          'no-restricted-imports': 'off',
+        },
+      },
+    ],
   },
 ]);
