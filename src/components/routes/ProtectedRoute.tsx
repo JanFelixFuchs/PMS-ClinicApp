@@ -1,16 +1,12 @@
-import type { JSX } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 import routes from '../../utils/routes/routes';
 import useSelector from '../../utils/hooks/useSelector';
 import { selectIsAuthenticated } from '../../utils/store/slices/identity';
 
 /* - - - STATIC ELEMENTS - - - */
-interface Props {
-  children: JSX.Element;
-}
 
 /* - - - COMPONENT - - - */
-const ProtectedRoute = ({ children }: Props) => {
+const ProtectedRoute = () => {
   /* - - - DESTRUCTING - - - */
   const isAuthenticated = useSelector(selectIsAuthenticated);
 
@@ -23,7 +19,15 @@ const ProtectedRoute = ({ children }: Props) => {
   /* - - - USE EFFECTS - - - */
 
   /* - - - RETURN - - - */
-  return isAuthenticated ? children : <Navigate to={routes.login} />;
+  if (!isAuthenticated)
+    return (
+      <Navigate
+        to={routes.login}
+        replace
+      />
+    );
+
+  return <Outlet />;
 };
 
 export default ProtectedRoute;

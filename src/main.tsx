@@ -11,6 +11,7 @@ import RegistrationPage from './pages/registration/RegistrationPage';
 import ProtectedRoute from './components/routes/ProtectedRoute';
 import routes from './utils/routes/routes';
 import AntdProvider from './components/config/AntdProvider';
+import PublicRoute from './components/routes/PublicRoute';
 
 const store = configureStore();
 
@@ -23,23 +24,23 @@ root.render(
       <BrowserRouter>
         <AntdProvider>
           <Routes>
-            <Route
-              path={routes.login}
-              element={<LoginPage />}
-            />
-            <Route
-              path={routes.registration}
-              element={<RegistrationPage />}
-            />
+            <Route element={<PublicRoute />}>
+              <Route
+                path={routes.login}
+                element={<LoginPage />}
+              />
+              <Route
+                path={routes.registration}
+                element={<RegistrationPage />}
+              />
+            </Route>
 
-            <Route
-              path='*'
-              element={
-                <ProtectedRoute>
-                  <AppContainer />
-                </ProtectedRoute>
-              }
-            />
+            <Route element={<ProtectedRoute />}>
+              <Route
+                path='*'
+                element={<AppContainer />}
+              />
+            </Route>
           </Routes>
         </AntdProvider>
       </BrowserRouter>
