@@ -22,7 +22,7 @@ const IconEmpty = ({ className }: Props) => {
   /* - - - RETURN - - - */
   return (
     <img
-      alt={t('picture.icon.empty')}
+      alt={t('picture.icon.empty.alternativeText')}
       className={className}
       src={icon}
     />
