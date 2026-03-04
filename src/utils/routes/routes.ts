@@ -1,11 +1,5 @@
-const appRoutePrefixes = {
-  appointments: 'appointments',
-  clinicians: 'clinicians',
-  devices: 'devices',
-  identity: 'identity',
-  patients: 'patients',
-  rooms: 'rooms',
-};
+import { pages } from '../pages/pages';
+import type { Page } from '../types/pages/Page';
 
 const pageRoutePrefixes = {
   appointmentCategories: 'appointmentCategories',
@@ -26,49 +20,49 @@ const pageRoutePrefixes = {
   rooms: 'rooms',
 };
 
-const routes = {
+const routes: Record<Page, string> = {
   // appointments app
-  appointmentCategories: `/${appRoutePrefixes.appointments}/${pageRoutePrefixes.appointmentCategories}`,
-  appointmentCategory: `/${appRoutePrefixes.appointments}/${pageRoutePrefixes.appointmentCategories}/:id`,
-  appointments: `/${appRoutePrefixes.appointments}/${pageRoutePrefixes.appointments}`,
-  appointment: `/${appRoutePrefixes.appointments}/${pageRoutePrefixes.appointments}/:id`,
+  appointmentCategories: `/${pages.appointmentCategories.app}/${pageRoutePrefixes.appointmentCategories}`,
+  appointmentCategory: `/${pages.appointmentCategory.app}/${pageRoutePrefixes.appointmentCategories}/:id`,
+  appointments: `/${pages.appointments.app}/${pageRoutePrefixes.appointments}`,
+  appointment: `/${pages.appointment.app}/${pageRoutePrefixes.appointments}/:id`,
 
   // clinicians app
-  clinicianCategories: `/${appRoutePrefixes.clinicians}/${pageRoutePrefixes.clinicianCategories}`,
-  clinicianCategory: `/${appRoutePrefixes.clinicians}/${pageRoutePrefixes.clinicianCategories}/:id`,
-  clinicians: `/${appRoutePrefixes.clinicians}/${pageRoutePrefixes.clinicians}`,
-  clinician: `/${appRoutePrefixes.clinicians}/${pageRoutePrefixes.clinicians}/:id`,
+  clinicianCategories: `/${pages.clinicianCategories.app}/${pageRoutePrefixes.clinicianCategories}`,
+  clinicianCategory: `/${pages.clinicianCategory.app}/${pageRoutePrefixes.clinicianCategories}/:id`,
+  clinicians: `/${pages.clinicians.app}/${pageRoutePrefixes.clinicians}`,
+  clinician: `/${pages.clinician.app}/${pageRoutePrefixes.clinicians}/:id`,
 
   // devices app
-  deviceCategories: `/${appRoutePrefixes.devices}/${pageRoutePrefixes.deviceCategories}`,
-  deviceCategory: `/${appRoutePrefixes.devices}/${pageRoutePrefixes.deviceCategories}/:id`,
-  devices: `/${appRoutePrefixes.devices}/${pageRoutePrefixes.devices}`,
-  device: `/${appRoutePrefixes.devices}/${pageRoutePrefixes.devices}/:id`,
+  deviceCategories: `/${pages.deviceCategories.app}/${pageRoutePrefixes.deviceCategories}`,
+  deviceCategory: `/${pages.deviceCategory.app}/${pageRoutePrefixes.deviceCategories}/:id`,
+  devices: `/${pages.devices.app}/${pageRoutePrefixes.devices}`,
+  device: `/${pages.device.app}/${pageRoutePrefixes.devices}/:id`,
 
-  // home app
+  // home page
   home: '/home',
 
   // identity app
-  roles: `/${appRoutePrefixes.identity}/${pageRoutePrefixes.roles}`,
-  role: `/${appRoutePrefixes.identity}/${pageRoutePrefixes.roles}/:id`,
-  users: `/${appRoutePrefixes.identity}/${pageRoutePrefixes.users}`,
-  user: `/${appRoutePrefixes.identity}/${pageRoutePrefixes.users}/:id`,
+  roles: `/${pages.roles.app}/${pageRoutePrefixes.roles}`,
+  role: `/${pages.role.app}/${pageRoutePrefixes.roles}/:id`,
+  users: `/${pages.users.app}/${pageRoutePrefixes.users}`,
+  user: `/${pages.user.app}/${pageRoutePrefixes.users}/:id`,
 
   // login page
   login: '/login',
 
   // patients app
-  patients: `/${appRoutePrefixes.patients}/${pageRoutePrefixes.patients}`,
-  patient: `/${appRoutePrefixes.patients}/${pageRoutePrefixes.patients}/:id`,
+  patients: `/${pages.patients.app}/${pageRoutePrefixes.patients}`,
+  patient: `/${pages.patient.app}/${pageRoutePrefixes.patients}/:id`,
 
   // registration page
   registration: '/registration',
 
   // rooms app
-  roomCategories: `/${appRoutePrefixes.rooms}/${pageRoutePrefixes.roomCategories}`,
-  roomCategory: `/${appRoutePrefixes.rooms}/${pageRoutePrefixes.roomCategories}/:id`,
-  rooms: `/${appRoutePrefixes.rooms}/${pageRoutePrefixes.rooms}`,
-  room: `/${appRoutePrefixes.rooms}/${pageRoutePrefixes.rooms}/:id`,
+  roomCategories: `/${pages.roomCategories.app}/${pageRoutePrefixes.roomCategories}`,
+  roomCategory: `/${pages.roomCategory.app}/${pageRoutePrefixes.roomCategories}/:id`,
+  rooms: `/${pages.rooms.app}/${pageRoutePrefixes.rooms}`,
+  room: `/${pages.room.app}/${pageRoutePrefixes.rooms}/:id`,
 };
 
 export default routes;
