@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import routes from './routes';
 import type { ItemType } from 'antd/es/breadcrumb/Breadcrumb';
 import { type TFunction } from 'i18next';
-import { type ProtectedPage } from '../types/pages/Page';
+import { type ProtectedPage } from '../types/pages/PageGroup';
 
 type BreadcrumbPage = ProtectedPage;
 
@@ -142,9 +142,6 @@ const createBreadcrumbItems = (
     })),
   ];
 };
-
-// type BreadcrumbItemConfigs = typeof breadcrumbItemConfigs;
-// type BreadcrumbPageKey = keyof BreadcrumbItemConfigs;
 
 export const getBreadcrumbItems = (
   page: BreadcrumbPage,

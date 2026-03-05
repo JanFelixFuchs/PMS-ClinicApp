@@ -30,34 +30,44 @@ import type { App } from '../types/apps/Apps';
 type PageConfig = {
   app: App | null;
   element: React.ReactNode;
+  isOverviewPage: boolean;
   isProtected: boolean;
+  isUsingTemplate: boolean;
   name: Page;
 };
 
-export const pages: Record<Page, PageConfig> = {
+export const pages = {
   // appointments app
   appointmentCategories: {
     app: 'appointments',
     element: <AppointmentCategoriesPage />,
+    isOverviewPage: true,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'appointmentCategories',
   },
   appointmentCategory: {
     app: 'appointments',
     element: <AppointmentCategoryPage />,
+    isOverviewPage: false,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'appointmentCategory',
   },
   appointments: {
     app: 'appointments',
     element: <AppointmentsPage />,
+    isOverviewPage: true,
     isProtected: true,
+    isUsingTemplate: false,
     name: 'appointments',
   },
   appointment: {
     app: 'appointments',
     element: <AppointmentPage />,
+    isOverviewPage: false,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'appointment',
   },
 
@@ -65,25 +75,33 @@ export const pages: Record<Page, PageConfig> = {
   clinicianCategories: {
     app: 'clinicians',
     element: <ClinicianCategoriesPage />,
+    isOverviewPage: true,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'clinicianCategories',
   },
   clinicianCategory: {
     app: 'clinicians',
     element: <ClinicianCategoryPage />,
+    isOverviewPage: false,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'clinicianCategory',
   },
   clinicians: {
     app: 'clinicians',
     element: <CliniciansPage />,
+    isOverviewPage: true,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'clinicians',
   },
   clinician: {
     app: 'clinicians',
     element: <ClinicianPage />,
+    isOverviewPage: false,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'clinician',
   },
 
@@ -91,25 +109,33 @@ export const pages: Record<Page, PageConfig> = {
   deviceCategories: {
     app: 'devices',
     element: <DeviceCategoriesPage />,
+    isOverviewPage: true,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'deviceCategories',
   },
   deviceCategory: {
     app: 'devices',
     element: <DeviceCategoryPage />,
+    isOverviewPage: false,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'deviceCategory',
   },
   devices: {
     app: 'devices',
     element: <DevicesPage />,
+    isOverviewPage: true,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'devices',
   },
   device: {
     app: 'devices',
     element: <DevicePage />,
+    isOverviewPage: false,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'device',
   },
 
@@ -117,7 +143,9 @@ export const pages: Record<Page, PageConfig> = {
   home: {
     app: null,
     element: <HomePage />,
+    isOverviewPage: false,
     isProtected: true,
+    isUsingTemplate: false,
     name: 'home',
   },
 
@@ -125,25 +153,33 @@ export const pages: Record<Page, PageConfig> = {
   roles: {
     app: 'identity',
     element: <RolesPage />,
+    isOverviewPage: true,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'roles',
   },
   role: {
     app: 'identity',
     element: <RolePage />,
+    isOverviewPage: false,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'role',
   },
   users: {
     app: 'identity',
     element: <UsersPage />,
+    isOverviewPage: true,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'users',
   },
   user: {
     app: 'identity',
     element: <UserPage />,
+    isOverviewPage: false,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'user',
   },
 
@@ -151,7 +187,9 @@ export const pages: Record<Page, PageConfig> = {
   login: {
     app: null,
     element: <LoginPage />,
+    isOverviewPage: false,
     isProtected: false,
+    isUsingTemplate: false,
     name: 'login',
   },
 
@@ -159,13 +197,17 @@ export const pages: Record<Page, PageConfig> = {
   patients: {
     app: 'patients',
     element: <PatientsPage />,
+    isOverviewPage: true,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'patients',
   },
   patient: {
     app: 'patients',
     element: <PatientPage />,
+    isOverviewPage: false,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'patient',
   },
 
@@ -173,7 +215,9 @@ export const pages: Record<Page, PageConfig> = {
   registration: {
     app: null,
     element: <RegistrationPage />,
+    isOverviewPage: false,
     isProtected: false,
+    isUsingTemplate: false,
     name: 'registration',
   },
 
@@ -181,27 +225,35 @@ export const pages: Record<Page, PageConfig> = {
   roomCategories: {
     app: 'rooms',
     element: <RoomCategoriesPage />,
+    isOverviewPage: true,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'roomCategories',
   },
   roomCategory: {
     app: 'rooms',
     element: <RoomCategoryPage />,
+    isOverviewPage: false,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'roomCategory',
   },
   rooms: {
     app: 'rooms',
     element: <RoomsPage />,
+    isOverviewPage: true,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'rooms',
   },
   room: {
     app: 'rooms',
     element: <RoomPage />,
+    isOverviewPage: false,
     isProtected: true,
+    isUsingTemplate: true,
     name: 'room',
   },
-};
+} as const satisfies Record<Page, PageConfig>;
 
 export default pages;
