@@ -106,6 +106,9 @@ type FilterPages<T, Condition> = {
 }[keyof T];
 
 export type Page = keyof typeof pages;
+
+export type ProtectedPage = Exclude<Page, 'login' | 'registration'>;
+
 export type OverviewPageUsingTemplate = FilterPages<
   typeof pages,
   { isOverviewPage: true; isUsingTemplate: true }

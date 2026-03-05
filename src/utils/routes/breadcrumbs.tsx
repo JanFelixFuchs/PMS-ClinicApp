@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import routes from './routes';
 import type { ItemType } from 'antd/es/breadcrumb/Breadcrumb';
 import { type TFunction } from 'i18next';
-import { type Page } from '../types/pages/Page';
+import { type ProtectedPage } from '../types/pages/Page';
 
-type BreadcrumbPage = Exclude<Page, 'login' | 'registration'>;
+type BreadcrumbPage = ProtectedPage;
 
 type BreadcrumbItemData = {
   pageName: BreadcrumbPage;

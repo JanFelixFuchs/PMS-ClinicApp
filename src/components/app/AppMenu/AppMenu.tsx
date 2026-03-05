@@ -12,13 +12,13 @@ import IconIdentity from '../../icons/IconIdentity';
 import { useTranslation } from 'react-i18next';
 import { useState, type ReactNode } from 'react';
 import type { App } from '../../../utils/types/apps/Apps';
-import type { Page } from '../../../utils/types/pages/Page';
+import type { ProtectedPage } from '../../../utils/types/pages/Page';
 
 /* - - - STATIC ELEMENTS - - - */
 type MenuItem = Required<MenuProps>['items'][number];
 
 type LeafMenuItemData = {
-  route: Page;
+  route: ProtectedPage;
   icon?: ReactNode;
 };
 

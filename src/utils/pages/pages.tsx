@@ -1,5 +1,5 @@
 import type React from 'react';
-import { pages as pageNames, type Page } from '../types/pages/Page';
+import type { Page } from '../types/pages/Page';
 import AppointmentCategoriesPage from '../../pages/appointments/AppointmentCategoriesPage';
 import AppointmentCategoryPage from '../../pages/appointments/AppointmentCategoryPage';
 import ClinicianCategoryPage from '../../pages/clinicians/ClinicianCategoryPage';
@@ -204,4 +204,4 @@ export const pages: Record<Page, PageConfig> = {
   },
 };
 
-export default pageNames;
+export default pages;
