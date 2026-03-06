@@ -1,5 +1,5 @@
 import { Breadcrumb, Col, Divider, Flex, Row } from 'antd';
-import styles from './PageSkeleton.module.css';
+import styles from './PageLayoutSkeleton.module.css';
 import Title from 'antd/es/typography/Title';
 import type { ItemType } from 'antd/es/breadcrumb/Breadcrumb';
 import type { ComponentType, PropsWithChildren } from 'react';
@@ -11,7 +11,7 @@ interface Props {
   title: string;
 }
 
-const PageSkeleton = ({
+const PageLayoutSkeleton = ({
   breadcrumbItems,
   children,
   icon: Icon,
@@ -49,10 +49,10 @@ const PageSkeleton = ({
         </Col>
       </Row>
 
-      <Divider className={styles['divider'] ?? ''} />
+      <Divider size='middle' />
       {children}
     </Flex>
   );
 };
 
-export default PageSkeleton;
+export default PageLayoutSkeleton;
