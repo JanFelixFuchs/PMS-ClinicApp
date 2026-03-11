@@ -199,7 +199,7 @@ export const pages = {
     element: <PatientsPage />,
     isOverviewPage: true,
     isProtected: true,
-    isUsingTemplate: true,
+    isUsingTemplate: false,
     name: 'patients',
   },
   patient: {
