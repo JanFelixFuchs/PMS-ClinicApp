@@ -1,7 +1,7 @@
 export const HttpMethod = {
   POST: 'post',
   GET: 'get',
-  UPDATE: 'update',
+  PUT: 'put',
   DELETE: 'delete',
 } as const;
 
