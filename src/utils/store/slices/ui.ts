@@ -1,8 +1,9 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 import type { RootState } from '../configureStore';
+import type { Language } from '../../types/ui/Languages';
 
 interface UiState {
-  language: string;
+  language: Language;
 }
 
 const initialState: UiState = {
@@ -14,7 +15,7 @@ const ui = createSlice({
   initialState,
   reducers: {
     // reducer for changing the language
-    changeLanguage: (state, action: PayloadAction<{ language: string }>) => {
+    changeLanguage: (state, action: PayloadAction<{ language: Language }>) => {
       state.language = action.payload.language;
     },
   },
