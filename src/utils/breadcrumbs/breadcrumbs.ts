@@ -1,17 +1,10 @@
-import { Link } from 'react-router-dom';
-import routes from './routes';
-import type { ItemType } from 'antd/es/breadcrumb/Breadcrumb';
-import { type TFunction } from 'i18next';
-import { type ProtectedPage } from '../types/pages/PageGroup';
+import type { BreadcrumbItemData } from '../types/common/BreadcrumbTypes';
+import type { ProtectedPage } from '../types/pages/PageGroups';
 
-type BreadcrumbPage = ProtectedPage;
-
-type BreadcrumbItemData = {
-  pageName: BreadcrumbPage;
-  hasRoute: boolean;
-};
-
-const breadcrumbItemConfigs: Record<BreadcrumbPage, BreadcrumbItemData[]> = {
+export const breadcrumbItemConfigs: Record<
+  ProtectedPage,
+  BreadcrumbItemData[]
+> = {
   // appointments
   appointmentCategories: [
     { pageName: 'home', hasRoute: true },
@@ -125,30 +118,4 @@ const breadcrumbItemConfigs: Record<BreadcrumbPage, BreadcrumbItemData[]> = {
     { pageName: 'rooms', hasRoute: true },
     { pageName: 'room', hasRoute: false },
   ],
-};
-
-const createBreadcrumbItems = (
-  breadcrumbItemsData: BreadcrumbItemData[],
-  t: TFunction
-): ItemType[] => {
-  return [
-    ...breadcrumbItemsData.map(({ pageName, hasRoute }) => ({
-      key: `breadcrumbItem-${pageName}`,
-      title: hasRoute ? (
-        <Link to={routes[pageName]}>{t(`page.${pageName}.title`)}</Link>
-      ) : (
-        t(`page.${pageName}.title`)
-      ),
-    })),
-  ];
-};
-
-export const getBreadcrumbItems = (
-  page: BreadcrumbPage,
-  t: TFunction
-): ItemType[] => {
-  return createBreadcrumbItems(
-    breadcrumbItemConfigs[page] as BreadcrumbItemData[],
-    t
-  );
 };
