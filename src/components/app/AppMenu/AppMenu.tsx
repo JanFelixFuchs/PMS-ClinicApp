@@ -12,7 +12,7 @@ import IconIdentity from '../../icons/IconIdentity';
 import { useTranslation } from 'react-i18next';
 import { useState, type ReactNode } from 'react';
 import type { App } from '../../../utils/types/apps/Apps';
-import type { ProtectedPage } from '../../../utils/types/pages/PageGroup';
+import type { ProtectedPage } from '../../../utils/types/pages/PageGroups';
 
 /* - - - STATIC ELEMENTS - - - */
 type MenuItem = Required<MenuProps>['items'][number];
@@ -28,18 +28,18 @@ type NonLeafMenuItemData = {
   children: LeafMenuItemData[];
 };
 
-const isNonLeafMenuItemData = (
-  menuItemData: LeafMenuItemData | NonLeafMenuItemData
-) => 'children' in menuItemData;
+interface Props {
+  collapsed: boolean;
+}
 
 const menuItemsData: (NonLeafMenuItemData | LeafMenuItemData)[] = [
   {
     route: 'home',
-    icon: <IconHome className={styles['icon'] ?? ''} />,
+    icon: <IconHome />,
   },
   {
     appName: 'appointments',
-    icon: <IconAppointment className={styles['icon'] ?? ''} />,
+    icon: <IconAppointment />,
     children: [
       {
         route: 'appointments',
@@ -51,11 +51,11 @@ const menuItemsData: (NonLeafMenuItemData | LeafMenuItemData)[] = [
   },
   {
     route: 'patients',
-    icon: <IconPatient className={styles['icon'] ?? ''} />,
+    icon: <IconPatient />,
   },
   {
     appName: 'devices',
-    icon: <IconDevice className={styles['icon'] ?? ''} />,
+    icon: <IconDevice />,
     children: [
       {
         route: 'devices',
@@ -67,7 +67,7 @@ const menuItemsData: (NonLeafMenuItemData | LeafMenuItemData)[] = [
   },
   {
     appName: 'clinicians',
-    icon: <IconClinician className={styles['icon'] ?? ''} />,
+    icon: <IconClinician />,
     children: [
       {
         route: 'clinicians',
@@ -79,7 +79,7 @@ const menuItemsData: (NonLeafMenuItemData | LeafMenuItemData)[] = [
   },
   {
     appName: 'rooms',
-    icon: <IconRoom className={styles['icon'] ?? ''} />,
+    icon: <IconRoom />,
     children: [
       {
         route: 'rooms',
@@ -91,7 +91,7 @@ const menuItemsData: (NonLeafMenuItemData | LeafMenuItemData)[] = [
   },
   {
     appName: 'identity',
-    icon: <IconIdentity className={styles['icon'] ?? ''} />,
+    icon: <IconIdentity />,
     children: [
       {
         route: 'users',
@@ -103,6 +103,10 @@ const menuItemsData: (NonLeafMenuItemData | LeafMenuItemData)[] = [
   },
 ];
 
+const isNonLeafMenuItemData = (
+  menuItemData: LeafMenuItemData | NonLeafMenuItemData
+) => 'children' in menuItemData;
+
 const leafMenuItemKeys = menuItemsData.flatMap((menuItemData) => {
   return isNonLeafMenuItemData(menuItemData)
     ? menuItemData.children.map((child) => routes[child.route])
@@ -110,7 +114,7 @@ const leafMenuItemKeys = menuItemsData.flatMap((menuItemData) => {
 });
 
 /* - - - COMPONENT - - - */
-const AppMenu = () => {
+const AppMenu = ({ collapsed }: Props) => {
   /* - - - DESTRUCTING - - - */
   const { t } = useTranslation();
   const location = useLocation();
@@ -172,9 +176,14 @@ const AppMenu = () => {
   /* - - - RETURN - - - */
   return (
     <Menu
-      className={styles['menu'] ?? ''}
+      classNames={{
+        root: styles['menu-root'] ?? '',
+        itemIcon: styles['menu-item-icon'] ?? '',
+      }}
       items={menuItems}
       mode='inline'
+      tooltip={false}
+      inlineCollapsed={collapsed}
       onOpenChange={openKeysHandler}
       openKeys={currentOpenKeys}
       selectedKeys={[selectedKey ?? '']}
