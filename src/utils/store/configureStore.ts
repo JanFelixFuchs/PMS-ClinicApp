@@ -1,12 +1,13 @@
 import { configureStore as configureReduxStore } from '@reduxjs/toolkit';
 import rootReducer from './rootReducer';
-import httpMiddleware from './middleware/httpMiddleware';
+import { api } from './slices/api';
 
 const configureStore = () => {
   return configureReduxStore({
     reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware().concat(httpMiddleware),
+      getDefaultMiddleware().concat(api.middleware),
+    devTools: import.meta.env.DEV,
   });
 };
 
