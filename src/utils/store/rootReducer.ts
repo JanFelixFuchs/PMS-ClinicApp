@@ -1,10 +1,10 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import identityReducer from '../store/slices/identity';
 import uiReducer from '../store/slices/ui';
-import entitiesReducer from './entitiesReducer';
+import { api } from './slices/api';
 
 const rootReducer = combineReducers({
-  entities: entitiesReducer,
+  [api.reducerPath]: api.reducer,
   identity: identityReducer,
   ui: uiReducer,
 });
