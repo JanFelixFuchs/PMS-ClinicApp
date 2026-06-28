@@ -1,10 +1,4 @@
-import {
-  createApi,
-  fetchBaseQuery,
-  type BaseQueryFn,
-  type FetchArgs,
-  type FetchBaseQueryError,
-} from '@reduxjs/toolkit/query/react';
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { rtkTagTypes } from '../../api/rtkTagTypes';
 import type { RootState } from '../configureStore';
 import { HttpMethod } from '../../types/api/HttpMethod';
@@ -12,6 +6,7 @@ import { apiRoutes } from '../../api/apiRoutes';
 import type { HttpResult } from '../../types/api/HttpResult';
 import type { RefreshTokensOutputModel } from '../../types/outputModels/AuthOutputModels';
 import { login, logout } from './identity';
+import type { BaseQuery } from '../../types/rtk/BaseQuery';
 
 // extracting base url from environment variables
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
@@ -36,12 +31,7 @@ const privateQuery = fetchBaseQuery({
 });
 
 // base query
-const baseQuery: BaseQueryFn<
-  string | FetchArgs,
-  unknown,
-  FetchBaseQueryError,
-  { public?: boolean }
-> = async (args, api, extraOptions) => {
+const baseQuery: BaseQuery = async (args, api, extraOptions) => {
   // executing public query if public flag is set
   if (extraOptions?.public) return publicQuery(args, api, extraOptions);
 
