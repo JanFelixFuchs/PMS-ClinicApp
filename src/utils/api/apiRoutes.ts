@@ -1,5 +1,3 @@
-import type { Dayjs } from 'dayjs';
-import { toDateOnlyUtc } from '../conversions/dateConversions';
 import type { DeviceStatus } from '../types/enums/DeviceStatus';
 
 const apiPrefixes = {
@@ -33,8 +31,8 @@ export const apiRoutes = {
 
   // appointments
   createAppointment: () => apiPrefixes.appointments,
-  getAppointments: (startDate: Dayjs, endDate: Dayjs) =>
-    `${apiPrefixes.appointments}?startDate=${toDateOnlyUtc(startDate)}&endDate=${toDateOnlyUtc(endDate)}`,
+  getAppointments: (startDate: string, endDate: string) =>
+    `${apiPrefixes.appointments}?startDateTime=${encodeURIComponent(startDate)}&endDateTime=${encodeURIComponent(endDate)}`,
   getAppointment: (id: string) => `${apiPrefixes.appointments}/${id}`,
   updateAppointment: (id: string) => `${apiPrefixes.appointments}/${id}`,
   markAppointmentAsAttended: (id: string) =>
