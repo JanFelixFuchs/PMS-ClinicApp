@@ -1,4 +1,3 @@
-import type { Dayjs } from 'dayjs';
 import { apiRoutes } from '../../../api/apiRoutes';
 import { HttpMethod } from '../../../types/api/HttpMethod';
 import { transformHttpResult } from '../../../types/api/HttpResult';
@@ -31,7 +30,7 @@ export const appointmentApi = api.injectEndpoints({
 
     getAppointments: builder.query<
       AppointmentOverviewOutputModel[],
-      { startDate: Dayjs; endDate: Dayjs }
+      { startDate: string; endDate: string }
     >({
       query: ({ startDate, endDate }) => ({
         url: apiRoutes.getAppointments(startDate, endDate),
