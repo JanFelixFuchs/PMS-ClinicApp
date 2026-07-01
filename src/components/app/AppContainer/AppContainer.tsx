@@ -4,7 +4,7 @@ import Sider from 'antd/es/layout/Sider';
 import styles from './AppContainer.module.css';
 import AppMenu from '../AppMenu/AppMenu';
 import AppContent from '../AppContent/AppContent';
-import useSelector from '../../../utils/hooks/useSelector';
+import useSelector from '../../../utils/hooks/redux/useSelector';
 import { selectSidebarStatus } from '../../../utils/store/slices/ui';
 import { useState } from 'react';
 

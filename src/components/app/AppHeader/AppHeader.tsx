@@ -3,7 +3,7 @@ import { Header } from 'antd/es/layout/layout';
 import Title from 'antd/es/typography/Title';
 import styles from './AppHeader.module.css';
 import Logo from '../../logos/Logo';
-import useSelector from '../../../utils/hooks/useSelector';
+import useSelector from '../../../utils/hooks/redux/useSelector';
 import { selectClinic, selectUser } from '../../../utils/store/slices/identity';
 import { useNavigate } from 'react-router-dom';
 import routes from '../../../utils/routes/routes';

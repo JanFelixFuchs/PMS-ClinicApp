@@ -36,7 +36,10 @@ export default defineConfig(
     },
   },
   {
-    files: ['src/utils/hooks/useDispatch.ts', 'src/utils/hooks/useSelector.ts'],
+    files: [
+      'src/utils/hooks/redux/useDispatch.ts',
+      'src/utils/hooks/redux/useSelector.ts',
+    ],
     rules: {
       'no-restricted-imports': 'off',
     },

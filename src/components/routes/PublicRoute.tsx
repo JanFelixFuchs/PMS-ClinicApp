@@ -1,6 +1,6 @@
 import { Navigate, Outlet } from 'react-router-dom';
 import routes from '../../utils/routes/routes';
-import useSelector from '../../utils/hooks/useSelector';
+import useSelector from '../../utils/hooks/redux/useSelector';
 import { selectIsAuthenticated } from '../../utils/store/slices/identity';
 
 /* - - - STATIC ELEMENTS - - - */

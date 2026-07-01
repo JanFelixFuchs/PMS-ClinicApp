@@ -6,7 +6,7 @@ import LoginPage from '../../../pages/login/LoginPage';
 import ProtectedRoute from '../../routes/ProtectedRoute';
 import AppContainer from '../AppContainer/AppContainer';
 import { App } from 'antd';
-import useDispatch from '../../../utils/hooks/useDispatch';
+import useDispatch from '../../../utils/hooks/redux/useDispatch';
 import { useRefreshTokensMutation } from '../../../utils/store/slices/api/auth';
 import { useEffect, useState } from 'react';
 import { login } from '../../../utils/store/slices/identity';
